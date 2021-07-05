@@ -1,10 +1,11 @@
-##<p style="text-align:center">TO DO LIST APP</p>
+## <p style="text-align:center">TO DO LIST APP</p>
 
 ---
 <center><image src="./do_thing_01.jpg"></center>
 
 <font size = "3">
-####A First Attempt at a To Do List Application
+
+#### A First Attempt at a To Do List Application
 This is my first attempt at creating a To Do List Application that wasn't simply a CLI application.  In its current form, this To Do List Application isn't perfect, and will need further work as it relies on Local Storage at this time (and there has been some difficulty in getting the "DONE" functionality working on it). Eventually I plan to add a basic Login Page and Database functionality with MariaDB (and possibly KnexJS or some other ORM).
 
 #### Install NodeJS:
