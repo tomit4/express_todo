@@ -49,6 +49,12 @@ Navigate to your express_todo directory, and from your terminal, enter:
 
 This will automatically install all dependencies necessary to run and test the application.
 
+##### Start the Server:
+
+To start the Server, simply navigate to your express_todo directory, and from your terminal, enter:
+
+```nodemon app.js```
+
 <font size="3">
 
 *Please note that this project was written by a beginner, it is my best attempt at creating a simple To Do List thus far and is more of a documentation of my practice with basic HTML, CSS and Vanilla JavaScript.  This project will be updated in the near future to add more features and clean up the code.*
