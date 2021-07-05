@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Your Thang!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>DO THE THING!</h1>
+    <form id="task_form" onsubmit="addToList();return false">
+    <label for="task" class="form_titles">TASK:</label>
+    <input type="text" maxlength="28" id="input_bar" placeholder="THERE IS NO TRY..."></input>
+    </form>
+    <button type="submit" id="submit_button" onclick="addToList()">SUBMIT</button>
+    <div class="container">
+        <div id="do_list">
+        </div>
+    </div>
+
+</body>
+<footer>
+
+    <div id="save_list">
+        <button type="submit" id="submit_list" onclick="saveToLocalStorage(), location.href='my_list.html'">SAVE</button>
+    </div>
+
+</footer>
+<script src="listworks.js">
+</script>
+</html>
