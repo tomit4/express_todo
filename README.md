@@ -37,7 +37,7 @@ Next we'll need to actually download the project:
 
 ##### Clone the Repository:
 
-```git clone https:// ```
+```https://github.com/tomit4/express_todo.git```
 
 And install all needed dependencies:
 
