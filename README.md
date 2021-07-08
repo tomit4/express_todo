@@ -1,12 +1,24 @@
-## <p style="text-align:center">TO DO LIST APP</p>
-
+<center>TO DO LIST APP</center>
 ---
 <center><image src="./do_thing_01.jpg"></center>
 
 <font size = "3">
 
-#### A First Attempt at a To Do List Application
-This is my first attempt at creating a To Do List Application that wasn't simply a CLI application.  In its current form, this To Do List Application isn't perfect, and will need further work as it relies on Local Storage at this time (and there has been some difficulty in getting the "DONE" functionality working on it). Eventually I plan to add a basic Login Page and Database functionality with MariaDB (and possibly KnexJS or some other ORM).
+#### A First Attempt at a To Do List Application...I need help...
+If you are reading this, then you have stumbled upon my first attempt at making a To Do List Application using NodeJS, Express, and basic HTML/CSS.  This application also reads/writes data to a MariaDB Database (albeit imperfectly at the time of this writing).  In order to experience the unintended behavior of this application, you'll need to install a few dependencies as well as create a user, database, and table per the specifications of the files herein.
+
+If you wish simply to see the code I have referenced in my search for help, please see the index.js, listworks.js, and mylist.js files to inspect specifically the fetch api code where I believe I have an error related to asynchronicity.
+
+As it stands now, the code only saves some of the list items submitted to the MariaDB database, and while I believe it has to do with asynchronicity, as a new coder, I am unsure as to how to resolve the matter.  Here are some pics of the strange behavior I am getting now:
+
+The first image shows the items to be submitted:
+<center><image src="./maria_error01.jpg"></center>
+The second image shows the items that were submitted to MariaDB:
+<center><image src="./maria_error02.jpg"></center>
+
+Any help or insight one can give, please contact me via the post that led you here.
+
+Below are more basic README instructions for the application itself (incomplete).
 
 #### Install NodeJS:
 You'll first need NodeJS and it's package manager, NPM:

@@ -1,7 +1,3 @@
-// Figure out how to use NodeJS's fs module system to writeFile() to either a .txt or a .json file which can then be module.export = listArray(.txt)
-// to our mylist.js file.  Expected issues are formatting for the .json file, and reading from a raw .txt file will be difficult to differentiate without using Regex, which
-// is probably not the most efficient way of doing it...go for the .json format
-
 let listArray = [];
 
 function addToList() {
@@ -26,6 +22,31 @@ function addToList() {
     console.log(listArray);
     renderList();
 }
+
+
+async function postData() {
+    for (let i = 0; i < listArray.length; i++) {    
+        await fetch('http://localhost:3000/maria_database', {
+            method: "POST",
+            mode: 'same-origin',
+            body: JSON.stringify({
+                "id": null,
+                "task": listArray[i].task
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            referrerPolicy: "no-referrer"
+        })
+      .then(res => res.json())
+      .catch((err) => console.error(err));
+    }
+}
+
+postData()
+    .then(res => {
+        console.log(res)
+    });
 
 function renderList() {
     let doList = document.getElementById("do_list");
@@ -82,3 +103,4 @@ function saveToLocalStorage() {
         localStorage.setItem(i, listArray[i].task);
     }
 }
+
