@@ -1,4 +1,4 @@
-<center>TO DO LIST APP</center>
+<h2 style="text-align:center">TO DO LIST APPLICATION</h2>
 ---
 <center><image src="./do_thing_01.jpg"></center>
 
