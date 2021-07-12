@@ -12,7 +12,7 @@ fetch('http://localhost:3000/maria_database')
 
         for (let i = 0; i < renderedList.length; i++) {
             ulStr += '<div id="' + i + '">' + '<li className="list_item" id="list_id_' + i + '">' + 
-            renderedList[i].task.toUpperCase() + '</li>' + '<button class="button_set buttons" id="button_id_' + i + 
+            renderedList[i].task + '</li>' + '<button class="button_set buttons" id="button_id_' + i + 
             '" onclick="finishTask(' + i + '), reset()">DONE</button></div>';
         }
 
@@ -22,7 +22,7 @@ fetch('http://localhost:3000/maria_database')
     })
     .catch((err) => console.error(err)));
 
-console.log(renderedList);
+// console.log(renderedList);
 
 // IGNORE BELOW FOR NOW.
 

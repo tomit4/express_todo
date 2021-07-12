@@ -22,9 +22,8 @@ router.get("/my_list", (req, res) => {
 
 router.get('/maria_database', async function (req, res) {
     try {
-        // const sqlQuery = 'SELECT id, task FROM tasks WHERE id=?';
         const sqlQuery = 'SELECT * FROM to_do'; // perhaps allow user to choose from databases at login page.
-        const rows = await pool.query(sqlQuery, req.params.id);
+        const rows = await pool.query(sqlQuery);
         res.status(200).json(rows);
     }
     catch(error) {
@@ -34,11 +33,11 @@ router.get('/maria_database', async function (req, res) {
 
 router.post('/maria_database', async function(req, res) {
     try{
-        const { id, task } = req.body;
+        const { listArray } = req.body;
+        // console.log(listArray);
+        const sqlQuery = 'INSERT INTO to_do (task) VALUES (?)';
 
-        const sqlQuery = 'INSERT INTO to_do (id, task) VALUES (?,?)';
-
-        const result = await pool.query(sqlQuery, [id, task]);
+        const result = await pool.query(sqlQuery, [listArray]);
 
         res.status(200).json(result.body);
     } catch(error) {
@@ -46,5 +45,4 @@ router.post('/maria_database', async function(req, res) {
     }
 })
 
-// We then export the object returned by the object to our app.js file where it is used within the app.use("/", index) middleware function.
 module.exports = router;

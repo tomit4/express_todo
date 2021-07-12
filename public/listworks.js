@@ -19,34 +19,26 @@ function addToList() {
     for (let i = 0; i < listArray.length; i++) {
         listArray[i].id = listArray.indexOf(listArray[i]);
     };
-    console.log(listArray);
+    postData(listArray[0]);
     renderList();
 }
 
-
-async function postData() {
-    for (let i = 0; i < listArray.length; i++) {    
-        await fetch('http://localhost:3000/maria_database', {
+function postData(toDo) {
+        fetch('http://localhost:3000/maria_database', {
             method: "POST",
-            mode: 'same-origin',
-            body: JSON.stringify({
-                "id": null,
-                "task": listArray[i].task
+            body: 
+            JSON.stringify({
+                "listArray": toDo.task
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
             referrerPolicy: "no-referrer"
         })
-      .then(res => res.json())
-      .catch((err) => console.error(err));
+        .then(res => res.json())
+        .catch((err) => console.error(err));
+        
     }
-}
-
-postData()
-    .then(res => {
-        console.log(res)
-    });
 
 function renderList() {
     let doList = document.getElementById("do_list");
@@ -103,4 +95,3 @@ function saveToLocalStorage() {
         localStorage.setItem(i, listArray[i].task);
     }
 }
-
