@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<!-- Lookup Basic Login System with Node.js Express, and MySQL from CodeShack to add Login page functionality -->
+<!-- Combine that with a popup form that will allow them to login, this is also how you can create edit functionality:
+https://www.w3docs.com/snippets/javascript/how-to-create-a-popup-form-using-javascript.html -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +17,8 @@
     <label for="task" class="form_titles">TASK:</label>
     <input type="text" maxlength="28" id="input_bar" placeholder="THERE IS NO TRY..."></input>
     </form>
-    <button type="submit" id="submit_button" onclick="addToList(), location.href='my_list.html'">SUBMIT</button>
+    <!-- Create a Message here that displays whenever the DONE button is hit and it fades after a few seconds and then deletes the <div> containing this -->
+
     <div class="container">
         <div id="do_list">
         </div>
@@ -23,18 +26,9 @@
 
 </body>
 <footer>
-
-    <!-- <div id="save_list">
-        <button type="submit" id="submit_list" onclick="saveToLocalStorage(), location.href='my_list.html'">SAVE</button>
-    </div> -->
-
-    <!-- <div id="register_list">
-        <button type="submit" id="submit_list" action="/update" method="POST" onclick="location.href='maria_database'">REG</button>
-    </div> -->
-
+    <button type="submit" id="submit_button" onclick="addToList()">SUBMIT</button>
 </footer>
 <base href=".">
-<!-- <script type="module" src="nanoid.js"></script> -->
 <script type="application/javascript" src="listworks.js">
 </script>
 </html>

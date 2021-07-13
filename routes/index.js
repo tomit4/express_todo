@@ -34,10 +34,24 @@ router.get('/maria_database', async function (req, res) {
 router.post('/maria_database', async function(req, res) {
     try{
         const { listArray } = req.body;
-        // console.log(listArray);
+
         const sqlQuery = 'INSERT INTO to_do (task) VALUES (?)';
 
         const result = await pool.query(sqlQuery, [listArray]);
+
+        res.status(200).json(result.body);
+    } catch(error) {
+        res.status(400).send(error.message)
+    }
+})
+
+router.delete('/maria_database', async function(req, res) {
+    try {
+        const { deletedItem } = req.body;
+
+        const sqlQuery = 'DELETE FROM to_do WHERE (task) = (?)';
+
+        const result = await pool.query(sqlQuery, [deletedItem]);
 
         res.status(200).json(result.body);
     } catch(error) {
