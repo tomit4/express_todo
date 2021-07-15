@@ -72,6 +72,14 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 
 ```CREATE TABLE to_do (id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, task VARCHAR(28) NOT NULL) Engine=InnoDB;```
 
+<p style=color:#206557ff>This next part is optional, but you may want to start up your database whenever you start your computer, on Linux, this is done easily by entering the following command into your terminal:</p>
+
+```sudo systemctl enable mariadb.service```
+
+<p style=color:#206557ff>Alternatively, you can simply start mariadb by entering the following into your terminal:</p>
+
+```sudo systemctl start mariadb.service```
+
 <p style=color:#206557ff>And that should do it, we're finally ready to install the To Do List App:</p>
 
 <h4 style=color:#206557ff>Install To Do List App:</h4>
