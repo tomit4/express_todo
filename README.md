@@ -90,6 +90,8 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 
 
 <p style=color:#206557ff>Navigate to your express_todo directory, and from your terminal, enter:</p>
+
+
 ```npm install```
 
 <p style=color:#206557ff>This will automatically install all dependencies necessary to run and test the application.</p>
