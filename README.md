@@ -63,6 +63,7 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 ```CREATE USER 'myname' @ 'localhost' IDENTIFIED BY 'mypassword'```
 
 <p style=color:#206557ff>And grant that user all privileges (note that granting all privileges could be insecure, consider deleting user once testing this app is done):</p>
+
 ```GRANT ALL PRIVILEGES on *.* TO myname@localhost IDENTIFIED BY 'mypassword';```
 
 <p style=color:#206557ff>Then we'll need to create a database and table:</p>
