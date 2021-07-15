@@ -1,8 +1,7 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
-const index = {router} = require("./routes/index");
-
+const index = { router } = require("./routes/index");
 
 const PORT = process.env.PORT || 3000;
 
@@ -13,10 +12,12 @@ const app = express();
 // would take precedence over the second.
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({
+    extended: true
+}));
 // app.set('view engine', 'html');
 
-app.use(express.static(path.join(__dirname, "public"))); //accesses our styles.css file by calling express.static, 
+app.use(express.static(path.join(__dirname, "public")));
 // this creates a WRITE STREAM from "public" and passes that to the requested object, which is our main directory(?)...
 app.use("/", index); // accesses and uses our index.js file from the main directory, this is our MOUNT POINT for the middleware
 // followed by index.js in our routes subdirectory, this establishes this as the ExpressJS router.
@@ -24,4 +25,3 @@ app.use("/", index); // accesses and uses our index.js file from the main direct
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
-

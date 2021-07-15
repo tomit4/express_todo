@@ -16,6 +16,7 @@ h1 {
     font-size:2.5rem;
     font-weight:900;
     text-align: center;
+    margin-left:2rem;
     border-style: solid;
     border-width: 4px;
     border-color: #206557ff;
@@ -32,10 +33,11 @@ h1 {
     font-weight: 900;
     font-size: 1.25em;
     margin-bottom: 0.5rem;
+    margin-left: 2rem;
     color:#206557ff;
 }
 
-input {
+#input_bar {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -77,6 +79,7 @@ input {
 }
 
 #submit_button:hover {
+    cursor: pointer;
     background-color:#206557ff;
 }
 
@@ -116,7 +119,83 @@ li{
     right: 16rem;
 }
 
+li:hover {
+    cursor:pointer;
+    background-color:#206557ff;
+}
 
+.popup{
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 900;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #206557ff;
+    color: #f4f4f4;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #206557ff transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;   
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#edit_bar {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-align:center;
+    list-style:none; /* doesn't work with class */
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+    border-style:solid;
+    border-radius: 10px;
+    width: 30rem;
+    height: 3rem;
+    position: relative;
+    right: 16rem;
+    border-color: #004234ff;
+    background-color:#f4f4f4;
+    color: #206557ff;
+}
 
 .button_set {
     max-width: 1200px;
@@ -148,31 +227,6 @@ li{
 }
 
 button:hover {
-    background-color:#206557ff;
-}
-
-#submit_list {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    font-family:inherit;
-    font-weight: 900;
-    font-size:100%;
-    margin: auto;
-    margin-top:0.5rem;
-    text-transform: none;
-    border-style:solid;
-    padding:0;
-    background-color:#00ae8cff;
-    border-color: #206557ff;
-    border-width: 3px;
-    color: #f4f4f4;
-    width: 5rem;
-    height: 3rem;
-    border-radius: 10px;
-}
-
-#submit_list:hover {
+    cursor: pointer;
     background-color:#206557ff;
 }
