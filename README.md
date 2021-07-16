@@ -3,11 +3,11 @@
 <h4 style=color:#206557ff>A First Attempt at a To Do List Application<h4>
 </header>
 <body>
-<<<<<<< HEAD
+
 <p style=color:#206557ff>This repository contains my first attempts at creating a Full Stack To Do List Application.  As the project stands right now, the application interfaces with a MariaDB SQL Database on the back end, routing through a NodeJS/ExpressJS server from a HTML/CSS/Vanilla JavaScript front end.  It currently exemplifies full CRUD (Create, READ, UPDATE, and DELETE) functionality.  There are still some bugs and unexpected behavior to be addressed(**see end of this README).</p>
-=======
+
 <p style=color:#206557ff>This repository contains my first attempts at creating a Full Stack To Do List Application.  As the project stands right now, the application interfaces with a MariaDB SQL Database on the back end, routing through a NodeJS/ExpressJS server from a HTML/CSS/Vanilla JavaScript front end.  It currently exemplifies full CRUD (Create, READ, UPDATE, and DELETE) functionality.  There are still some bugs and unexpected behavior to be addressed.</p>
->>>>>>> 895ef32673c0405557bfa789a4012a5875a19d86
+
 <p style=color:#206557ff>There are also additional features such as timestamps and login credentials I would like to implement in the near future.  All in all though, the project is a good reference point on how to utilize JavaScript's fetch API to interact with a NodeJS/ExpressJS backend alongside the MariaDB module.</p>
 
 <p style=color:#206557ff>In order to utilize the application as it is now, you will need to install a few simple tools and have an instance of MariaDB installed.</p>
