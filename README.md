@@ -3,7 +3,7 @@
 <h4 style=color:#206557ff>A First Attempt at a To Do List Application<h4>
 </header>
 <body>
-<p style=color:#206557ff>This repository contains my first attempts at creating a Full Stack To Do List Application.  As the project stands right now, the application interfaces with a MariaDB SQL Database on the back end, routing through a NodeJS/ExpressJS server from a HTML/CSS/Vanilla JavaScript front end.  It currently exemplifies full CRUD (Create, READ, UPDATE, and DELETE) functionality.  There are still some bugs and unexpected behavior to be addressed.</p>
+<p style=color:#206557ff>This repository contains my first attempts at creating a Full Stack To Do List Application.  As the project stands right now, the application interfaces with a MariaDB SQL Database on the back end, routing through a NodeJS/ExpressJS server from a HTML/CSS/Vanilla JavaScript front end.  It currently exemplifies full CRUD (Create, READ, UPDATE, and DELETE) functionality.  There are still some bugs and unexpected behavior to be addressed(**see end of this README).</p>
 <p style=color:#206557ff>There are also additional features such as timestamps and login credentials I would like to implement in the near future.  All in all though, the project is a good reference point on how to utilize JavaScript's fetch API to interact with a NodeJS/ExpressJS backend alongside the MariaDB module.</p>
 
 <p style=color:#206557ff>In order to utilize the application as it is now, you will need to install a few simple tools and have an instance of MariaDB installed.</p>
@@ -63,6 +63,7 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 ```CREATE USER 'myname' @ 'localhost' IDENTIFIED BY 'mypassword'```
 
 <p style=color:#206557ff>And grant that user all privileges (note that granting all privileges could be insecure, consider deleting user once testing this app is done):</p>
+
 ```GRANT ALL PRIVILEGES on *.* TO myname@localhost IDENTIFIED BY 'mypassword';```
 
 <p style=color:#206557ff>Then we'll need to create a database and table:</p>
@@ -70,6 +71,14 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 ```CREATE DATABASE tasks;```
 
 ```CREATE TABLE to_do (id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, task VARCHAR(28) NOT NULL) Engine=InnoDB;```
+
+<p style=color:#206557ff>This next part is optional, but you may want to start up your database whenever you start your computer, on Linux, this is done easily by entering the following command into your terminal:</p>
+
+```sudo systemctl enable mariadb.service```
+
+<p style=color:#206557ff>Alternatively, you can simply start mariadb by entering the following into your terminal:</p>
+
+```sudo systemctl start mariadb.service```
 
 <p style=color:#206557ff>And that should do it, we're finally ready to install the To Do List App:</p>
 
@@ -89,6 +98,8 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 
 
 <p style=color:#206557ff>Navigate to your express_todo directory, and from your terminal, enter:</p>
+
+
 ```npm install```
 
 <p style=color:#206557ff>This will automatically install all dependencies necessary to run and test the application.</p>
@@ -125,5 +136,8 @@ Installing MariaDB has multiple steps and is not as simple as inputting a single
 <p style=color:#206557ff>And that's it!  Enjoy creating To Do List Items that will persist to a MariaDB Database!</p>
 
 <font size="2">
+
+<p style=color:#206557ff>**The error I'm receiving in question is on each fetch request for fetch() DELETE and fetch() PUT, I am getting an error to the console that reads:<br><br><i>"SyntaxError: JSON.parse: unexpected end of data at line1 column 1 of the JSON data"</i><br><br>
+But I am unsure as to where exactly the error is occurring, any insight into this would be appreciated.**</p>
 
 *Please note that this project was written by a beginner, it is my best attempt at creating a simple To Do List thus far and is more of a documentation of my practice with basic HTML, CSS and Vanilla JavaScript.  This project will be updated in the near future to add more features and clean up the code.*

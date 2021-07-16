@@ -1,3 +1,8 @@
+/* I just wanted to note here how difficult it was for me to understand basic CSS. I definitely need more practice
+with it, as all this was for such a simple GUI and I didn't get all the functionality I wanted out of it at the end
+of the day.  Nevertheless, this isn't bad considering I wrote most of this from scratch and a lot of this was written
+with ALOT of trial and error. */
+
 body {
     display: flex;
     flex-direction: column;
